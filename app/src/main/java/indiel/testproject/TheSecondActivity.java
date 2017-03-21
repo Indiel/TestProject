@@ -9,6 +9,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+import static indiel.testproject.TheFirstActivity.TEXT_KEY;
+
 
 /**
  * Created by kori_ on 21.03.2017.
@@ -32,7 +34,7 @@ public class TheSecondActivity extends AppCompatActivity implements OnClickListe
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
-        intent.putExtra("",editText.getText().toString());
+        intent.putExtra(TEXT_KEY,editText.getText().toString());
         setResult(RESULT_OK, intent);
         finish();
     }
